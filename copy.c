@@ -40,4 +40,8 @@ if (!s)
 // t now capitalized, s remains lowercase
   printf("%s\n", s);
   printf("%s\n", t);
+
+// frees memory
+  free(t);
+  return 0;
 }
