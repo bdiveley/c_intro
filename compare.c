@@ -2,20 +2,14 @@
 #include <cs50.h>
 #include <string.h>
 
+bool compare_strings(string a, string b);
+
 int main(void)
 {
     string name = "Bailey";
-    string name2 = "Diveley";
-    int counter = 0;
+    string name2 = "Bailey";
 
-    for (int i = 0; i < strlen(name); i++)
-    {
-      if (name[i] == name2[i])
-      {
-        counter += 1;
-      }
-    }
-    if (counter == strlen(name))
+    if (compare_strings(name, name2))
     {
       printf("same\n");
     }
@@ -23,4 +17,20 @@ int main(void)
     {
       printf("different\n");
     }
+}
+
+bool compare_strings(string a, string b)
+{
+  if (strlen(a) != strlen(b))
+  {
+    return false;
+  }
+  for (int i = 0, n = strlen(a); i < n; i++)
+  {
+    if (a[i] != b[i])
+    {
+      return false;
+    }
+  }
+  return true;
 }
