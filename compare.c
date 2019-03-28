@@ -19,6 +19,7 @@ int main(void)
     }
 }
 
+// cant compare two strings, must compare each character within the string 
 bool compare_strings(string a, string b)
 {
   if (strlen(a) != strlen(b))
