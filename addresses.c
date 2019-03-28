@@ -12,7 +12,7 @@ int main(void)
   printf("Input: ");
   scanf("%s", t);
 
-// %p will print the memroy location of s
+// %p will print the memory location of s
   printf("s: %p\n", s);
 // returns s: 0x7ffee0e86ada
   printf("t: %p\n", t);
