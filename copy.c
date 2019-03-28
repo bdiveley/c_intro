@@ -20,14 +20,22 @@ if (!s)
     return 1;
   }
 
-  for (int i = 0, n= strlen(s);i <= n; i++)
-  {
-    if (strlen(t) > 0)
+  strcpy(t, s);
+
+  if (strlen(t) > 0)
     {
       t[0] = toupper(t[0]);
     }
-      t[i] = s[i];
-  }
+
+// more manual way of copying a string
+// for (int i = 0, n= strlen(s);i <= n; i++)
+// {
+//   if (strlen(t) > 0)
+//   {
+//     t[0] = toupper(t[0]);
+//   }
+//     t[i] = s[i];
+// }
 
 // t now capitalized, s remains lowercase
   printf("%s\n", s);
