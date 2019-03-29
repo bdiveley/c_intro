@@ -3,7 +3,14 @@
 
 int main(void)
 {
-  int capacity = 2;
+  int capacity;
+
+  do
+  {
+    printf("Capacity: ");
+    scanf("%i", &capacity);
+  } while (capacity < 0);
+
   int numbers[capacity];
 
   int size = 0;
